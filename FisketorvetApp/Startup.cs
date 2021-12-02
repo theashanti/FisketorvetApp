@@ -30,6 +30,7 @@ namespace FisketorvetApp
             services.AddTransient<IStoreRepository, AStoreJsonFile>();
             services.AddSession();
             services.AddMemoryCache();
+            // Hello
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
