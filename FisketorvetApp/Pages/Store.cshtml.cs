@@ -19,7 +19,7 @@ namespace FisketorvetApp.Pages.Shared
 
         public void OnGet()
         {
-
+            
         }
 
     }
