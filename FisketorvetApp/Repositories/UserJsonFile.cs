@@ -9,7 +9,7 @@ namespace FisketorvetApp.Repositories
 {
     public class UserJsonFile : IUserRepository
     {
-        string JsonFilePath = @"C:\Users\Lenovo\OneDrive - Zealand\Software design\Project work\1 Semester exams project\FisketorvetAppPart2\FisketorvetApp\Data\JsonUsers.json";
+        string JsonFilePath = @"E:\FUSKETORVUTUE\theashanti\FisketorvetApp\FisketorvetApp\Data\JsonUsers.json";
         private List<User> users;
 
         public UserJsonFile()

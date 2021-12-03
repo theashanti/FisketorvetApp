@@ -23,14 +23,14 @@ namespace FisketorvetApp.Helpers
             File.WriteAllText(filePath, output);
         }
 
-        public static List<AStore> ReadStoresFile(string filePath)
+        public static List<Store> ReadStoresFile(string filePath)
         {
             string jsonString = File.ReadAllText(filePath);
 
-            return JsonConvert.DeserializeObject<List<AStore>>(jsonString);
+            return JsonConvert.DeserializeObject<List<Store>>(jsonString);
         }
 
-        public static void WriteStoreFile(List<AStore> users, string filePath)
+        public static void WriteStoreFile(List<Store> users, string filePath)
         {
             string output = JsonConvert.SerializeObject(users);
 

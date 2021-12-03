@@ -8,11 +8,11 @@ namespace FisketorvetApp.Interfaces
 {
     public interface IStoreRepository
     {
-        public List<AStore> AllStores();
+        public List<Store> AllStores();
 
 
-        public List<AStore> Filter_By_StartCriteria(string criteria);
+        public List<Store> Filter_By_StartCriteria(string criteria);
 
-        public AStore GetStore(string name);
+        public Store GetStore(string name);
     }
 }

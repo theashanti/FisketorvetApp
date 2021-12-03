@@ -9,24 +9,24 @@ namespace FisketorvetApp.Repositories
 {
     public class AStoreJsonFile : IStoreRepository
     {
-        string JsonFilePath = @"C:\Users\Lenovo\OneDrive - Zealand\Software design\Project work\1 Semester exams project\FisketorvetAppPart2\FisketorvetApp\Data\JsonStores.json";
-        private List<AStore> stores;
+        string JsonFilePath = @"E:\FUSKETORVUTUE\theashanti\FisketorvetApp\FisketorvetApp\Data\JsonStores.json";
+        private List<Store> stores;
 
         public AStoreJsonFile()
         {
             stores = JsonHelper.ReadStoresFile(JsonFilePath);
         }
         
-        public List<AStore> AllStores()
+        public List<Store> AllStores()
         {
             return JsonHelper.ReadStoresFile(JsonFilePath);
         } 
 
-        public List<AStore> Filter_By_StartCriteria(string criteria)
+        public List<Store> Filter_By_StartCriteria(string criteria)
         {
-            List<AStore> filteredStores = new List<AStore>();
+            List<Store> filteredStores = new List<Store>();
 
-            foreach (AStore store in stores)
+            foreach (Store store in stores)
             {
                 if (store.Name.StartsWith(criteria))
                 {
@@ -37,9 +37,9 @@ namespace FisketorvetApp.Repositories
             return filteredStores;
         }
 
-        public AStore GetStore(string name)
+        public Store GetStore(string name)
         {
-            foreach (AStore store in stores)
+            foreach (Store store in stores)
             {
                 if (store.Name == name)
                 {
