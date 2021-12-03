@@ -9,6 +9,8 @@ namespace FisketorvetApp.Pages
 {
     public class ItemModel : PageModel
     {
+        public List<Models.AItem> ListOfItems { get; }
+
         public void OnGet()
         {
         }
