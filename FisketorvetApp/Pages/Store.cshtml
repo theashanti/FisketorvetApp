@@ -2,3 +2,46 @@
 @model FisketorvetApp.Pages.Shared.StoreModel
 @{
 }
+<!--Máté-->
+
+<h1>Stores</h1>
+
+<div>
+    <form>
+        <p>
+            Search: <input type="text" asp-for="Criteria" />
+            <input type="submit" value="filter" />
+        </p>
+    </form>
+</div>
+<table class="table table-bordered table-hover table-striped">
+    <thead>
+        <tr>
+            <th> Name </th>
+            <th> Location </th>
+            <th> Opening Hours </th>
+        </tr>
+    </thead>
+    <tbody>
+        @*@foreach (var store in Model.Stores)
+        {
+
+           <tr>
+               <td><a asp-area="" asp-page="/Restaurant">@store.Name</a></td>
+               <td><a asp-area="" asp-page="/Restaurant">@store.Location</a></td>
+               <td><a asp-area="" asp-page="/Restaurant">@store.OpeningHours</a></td>
+           </tr>
+        }*@
+
+        @foreach (var store in Model.Stores)
+        {
+
+            <tr style='cursor: pointer; cursor: hand;' onclick="window.location='https://localhost:44322/Restaurant';">
+                <td>@store.Name</td>
+                <td>@store.Location</td>
+                <td>@store.OpeningHours</td>
+            </tr>
+        }
+
+    </tbody>
+</table>
