@@ -52,7 +52,7 @@ namespace FisketorvetApp.Models
         //[Required, Range(0, 999)]
         //public int CSC { get; set; }
         
-        //public bool ClubMembership { get; set; }
+        public bool ClubMembership { get; set; }
 
         /*public User(string name, string email, string password, int phoneNumber, 
                     int dateOfBirthYear, int dateOfBirthMonth, int dateOfBirthDay)
@@ -72,7 +72,7 @@ namespace FisketorvetApp.Models
         {
             Id = IdIncrementer;
             IdIncrementer += 1;
-            //ClubMembership = false;
+            ClubMembership = false;
         }
     }
 }

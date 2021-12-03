@@ -1,0 +1,29 @@
+[
+  {
+    "Id": 1,
+    "Name": "Jacket",
+    "Price": 90,
+    "Gender": "Womens",
+    "Color":  "Blue",
+    "StoreName": "H&M"
+  },
+  {
+    "Id": 2,
+    "Name": "Jeans",
+    "Price": 200,
+    "StoreName": "H&M"
+  },
+  {
+    "Id": 3,
+    "Name": "Hat",
+    "Price": 80,
+    "StoreName": "Change"
+  },
+  {
+    "Id": 4,
+    "Name": "Ring",
+    "Price": 900,
+    "StoreName": "Change"
+  }
+] 
+

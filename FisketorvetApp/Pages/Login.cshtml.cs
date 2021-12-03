@@ -42,7 +42,8 @@ namespace FisketorvetApp.Pages
                     if (Email.Equals(user.Email) && Password.Equals(user.Password))
                     {
                         HttpContext.Session.SetString("Name", user.Name);
-                       
+                        HttpContext.Session.SetString("Membership", user.ClubMembership.ToString());
+
                         return RedirectToPage("/Index");
                     }
                     

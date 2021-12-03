@@ -28,9 +28,10 @@ namespace FisketorvetApp
             services.AddRazorPages();
             services.AddTransient<IUserRepository, UserJsonFile>();
             services.AddTransient<IStoreRepository, AStoreJsonFile>();
+            services.AddTransient<ClothesRepository, AItemJsonFile >();
             services.AddSession();
             services.AddMemoryCache();
-            // Hello
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

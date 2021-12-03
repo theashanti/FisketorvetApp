@@ -3,7 +3,7 @@ using System.IO;
 using FisketorvetApp.Models;
 using Newtonsoft.Json;
 
-// Martin
+// Martin, Máté(modifications)
 
 namespace FisketorvetApp.Helpers
 {
@@ -37,14 +37,14 @@ namespace FisketorvetApp.Helpers
             File.WriteAllText(filePath, output);
         }
         
-        public static List<AItem> ReadItemFile(string filePath)
+        public static List<Clothes> ReadItemFile(string filePath)
         {
             string jsonString = File.ReadAllText(filePath);
 
-            return JsonConvert.DeserializeObject<List<AItem>>(jsonString);
+            return JsonConvert.DeserializeObject<List<Clothes>>(jsonString);
         }
 
-        public static void WriteItemFile(List<AItem> items, string filePath)
+        public static void WriteItemFile(List<Clothes> items, string filePath)
         {
             string output = JsonConvert.SerializeObject(items);
 

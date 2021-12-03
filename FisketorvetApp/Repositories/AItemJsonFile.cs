@@ -3,30 +3,45 @@ using FisketorvetApp.Helpers;
 using FisketorvetApp.Interfaces;
 using FisketorvetApp.Models;
 
-// Martin
+// Martin, Máté(modifications)
 
 namespace FisketorvetApp.Repositories
 {
-    public class AItemJsonFile : IItemRepository
+    public class AItemJsonFile : ClothesRepository
     {
-        string JsonFilePath = @"C:\Users\Lenovo\OneDrive - Zealand\Software design\Project work\1 Semester exams project\FisketorvetAppPart2\FisketorvetApp\Data\JsonStores.json";
-        private List<AItem> items;
+        string JsonFilePath = @"E:\FUSKETORVUTUE\theashanti\FisketorvetApp\FisketorvetApp\Data\JsonClothes.json";
+        private List<Clothes> items;
 
         public AItemJsonFile()
         {
             items = JsonHelper.ReadItemFile(JsonFilePath);
         }
         
-        public List<AItem> AllItems()
+        public List<Clothes> AllItems()
         {
             return JsonHelper.ReadItemFile(JsonFilePath);
-        } 
-
-        public List<AItem> Filter_By_StartCriteria(string criteria)
+        }
+        
+        //new get
+        public List<Clothes> GetClothesForStore(string name)
         {
-            List<AItem> filteredItems = new List<AItem>();
+            List<Clothes> StoreItems = new List<Clothes>();
+            foreach(Clothes item in items)
+            {
+                if (item.StoreName.Equals(name))
+                {
+                    StoreItems.Add(item);
+                }
+            }
+            return StoreItems;
+        }
+        
 
-            foreach (AItem item in items)
+        public List<Clothes> Filter_By_StartCriteria(string criteria)
+        {
+            List<Clothes> filteredItems = new List<Clothes>();
+
+            foreach (Clothes item in items)
             {
                 if (item.Name.StartsWith(criteria))
                 {
@@ -37,9 +52,9 @@ namespace FisketorvetApp.Repositories
             return filteredItems;
         }
 
-        public AItem GetItem(int id)
+        public Clothes GetItem(int id)
         {
-            foreach (AItem item in items)
+            foreach (Clothes item in items)
             {
                 if (item.Id == id)
                 {

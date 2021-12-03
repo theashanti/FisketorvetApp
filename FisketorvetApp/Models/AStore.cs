@@ -11,7 +11,10 @@ namespace FisketorvetApp.Models
         public int PhoneNumber { get; set; }
         public string Location { get; set; }
         public string OpeningHours { get; set; }
+        //new try
+        
 
+        //old
         public AStore(string name, int phoneNumber, string location, string openingHours)
         {
             Name = name;

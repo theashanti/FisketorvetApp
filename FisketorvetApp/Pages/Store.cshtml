@@ -35,12 +35,14 @@
 
         @foreach (var store in Model.Stores)
         {
-
-            <tr style='cursor: pointer; cursor: hand;' onclick="window.location='https://localhost:44322/Restaurant';">
-                <td>@store.Name</td>
+            
+            <tr>
+                <td><a asp-page="/Item" asp-route-name="@store.Name">@store.Name</a></td>
                 <td>@store.Location</td>
                 <td>@store.OpeningHours</td>
+
             </tr>
+            
         }
 
     </tbody>
