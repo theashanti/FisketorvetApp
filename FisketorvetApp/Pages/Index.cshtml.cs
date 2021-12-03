@@ -20,5 +20,21 @@ namespace FisketorvetApp.Pages
         public void OnGet()
         {
         }
+        public string IsClubMember()
+        {
+
+            foreach (User user in users.AllUsers())
+            {
+                if (user.ClubMembership == true)
+                {
+                    return "You are a club member";
+                }
+                else
+                {
+                    return "You are not a club member";
+                }
+            }
+            return null;
     }
+
 }
