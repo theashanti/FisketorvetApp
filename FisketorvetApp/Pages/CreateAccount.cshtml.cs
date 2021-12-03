@@ -20,7 +20,6 @@ namespace FisketorvetApp.Pages
         
         public void OnGet()
         {
-         
         }
         
         public IActionResult OnPost()
