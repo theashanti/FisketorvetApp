@@ -20,8 +20,6 @@ namespace FisketorvetApp.Pages
         
         public void OnGet()
         {
-            BOB, BOB
-                asfasf
         }
         
         public IActionResult OnPost()
