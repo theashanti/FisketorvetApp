@@ -23,7 +23,7 @@ namespace FisketorvetApp.Pages
         public string IsClubMember()
         {
 
-            foreach (User user in users.AllUsers())
+            foreach (var user in users.AllUsers())
             {
                 if (user.ClubMembership == true)
                 {
@@ -35,6 +35,6 @@ namespace FisketorvetApp.Pages
                 }
             }
             return null;
+        }
     }
-
 }
