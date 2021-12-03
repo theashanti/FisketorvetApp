@@ -36,5 +36,19 @@ namespace FisketorvetApp.Helpers
 
             File.WriteAllText(filePath, output);
         }
+        
+        public static List<AItem> ReadItemFile(string filePath)
+        {
+            string jsonString = File.ReadAllText(filePath);
+
+            return JsonConvert.DeserializeObject<List<AItem>>(jsonString);
+        }
+
+        public static void WriteItemFile(List<AItem> items, string filePath)
+        {
+            string output = JsonConvert.SerializeObject(items);
+
+            File.WriteAllText(filePath, output);
+        }
     }
 }
