@@ -1,29 +1,53 @@
 [
   {
     "Id": 1,
-    "Name": "Jacket",
+    "Type": "Jacket",
+    "Name": "Black Denim",
     "Price": 90,
     "Gender": "Womens",
-    "Color":  "Blue",
+    "Size": "M",
+    "Color": "Blue",
     "StoreName": "H&M"
   },
   {
     "Id": 2,
+    "Type": "Pants",
     "Name": "Jeans",
     "Price": 200,
+    "Gender": "Mans",
+    "Size": "30/32",
+    "Color": "Dark blue",
     "StoreName": "H&M"
   },
   {
-    "Id": 3,
-    "Name": "Hat",
-    "Price": 80,
+    "Id":3,
+    "Type": "Pants",
+    "Name": "Pajama pants",
+    "Price":200,
+    "Gender": "Womens",
+    "Size": "32",
+    "Color": "Red",
     "StoreName": "Change"
   },
   {
     "Id": 4,
-    "Name": "Ring",
-    "Price": 900,
-    "StoreName": "Change"
+    "Type": "Shoes",
+    "Name": "Blaze running shoes",
+    "Price": 2000,
+    "Gender": "Male",
+    "Size": "From 38 to 43",
+    "Color": "Orange",
+    "StoreName": "Nike"
+  },
+  {
+    "Id":5,
+    "Type": "Shoes",
+    "Name": "Ultraboost",
+    "Price": 1299,
+    "Gender": "Womens",
+    "Size": "From 36 to 43",
+    "Color": "White",
+    "StoreName": "Adidas"
   }
 ] 
 

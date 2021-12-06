@@ -13,7 +13,7 @@ namespace FisketorvetApp.Repositories
         //Máté directory: E:\FUSKETORVUTUE\theashanti\FisketorvetApp\FisketorvetApp\Data\JsonClothes.json
         //Ash C:\Users\ashan\OneDrive\Área de Trabalho\FisketorvetApp\FisketorvetApp\Data\JsonClothes.json
         
-        string JsonFilePath = @"C:\Users\marti\Desktop\FisketorvetApp\FisketorvetApp\Repositories\AClothesJsonFile.cs";
+        string JsonFilePath = @"C:\Users\ashan\OneDrive\Área de Trabalho\FisketorvetApp\FisketorvetApp\Data\JsonClothes.json";
         private List<Clothes> items;
 
         public AClothesJsonFile()

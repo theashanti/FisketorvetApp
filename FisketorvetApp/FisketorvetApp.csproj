@@ -5,6 +5,12 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <Compile Remove="Models\Pants.cs" />
+      <Compile Remove="Models\Shoes.cs" />
+      <Compile Remove="Models\Top.cs" />
+    </ItemGroup>
+
+    <ItemGroup>
       <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     </ItemGroup>
 
