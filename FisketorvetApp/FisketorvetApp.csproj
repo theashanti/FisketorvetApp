@@ -14,4 +14,17 @@
       <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="wwwroot\Images\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Include="wwwroot\Images\Image 1.jpg" />
+      <None Include="wwwroot\Images\Image 2.jpg" />
+      <None Include="wwwroot\Images\Image 3.jpg" />
+      <None Include="wwwroot\Images\Image 4.jpg" />
+      <None Include="wwwroot\Images\Image 5.jpg" />
+      <None Include="wwwroot\Images\Image 6.jpg" />
+    </ItemGroup>
+
 </Project>
