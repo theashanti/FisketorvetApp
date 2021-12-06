@@ -12,7 +12,7 @@ namespace FisketorvetApp.Repositories
         //C:\Users\marti\Desktop\FisketorvetApp\FisketorvetApp\Data\JsonStores.json
         //Máté directory: E:\FUSKETORVUTUE\theashanti\FisketorvetApp\FisketorvetApp\Data\JsonStores.json
          //Ash C:\Users\ashan\OneDrive\Área de Trabalho\FisketorvetApp\FisketorvetApp\Data\JsonStores.json
-
+         //mitra  C:\Users\Uni\Source2\Repos\theashanti\FisketorvetApp\FisketorvetApp\Data\JsonStores.json
         string JsonFilePath = @"C:\Users\marti\Desktop\FisketorvetApp\FisketorvetApp\Data\JsonStores.json";
         private List<Store> stores;
 
