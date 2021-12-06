@@ -9,7 +9,9 @@ namespace FisketorvetApp.Repositories
 {
     public class AClothesJsonFile : ClothesRepository
     {
-        string JsonFilePath = @"E:\FUSKETORVUTUE\theashanti\FisketorvetApp\FisketorvetApp\Data\JsonClothes.json";
+        //C:\Users\marti\Desktop\FisketorvetApp\FisketorvetApp\Repositories\AClothesJsonFile.cs
+        
+        string JsonFilePath = @"C:\Users\marti\Desktop\FisketorvetApp\FisketorvetApp\Repositories\AClothesJsonFile.cs";
         private List<Clothes> items;
 
         public AClothesJsonFile()

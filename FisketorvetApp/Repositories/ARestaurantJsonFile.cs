@@ -11,7 +11,9 @@ namespace FisketorvetApp.Repositories
 {
     public class ARestaurantJsonFile : IRestaurantRepository
     {
-        string JsonFilePath = @"E:\FUSKETORVUTUE\theashanti\FisketorvetApp\FisketorvetApp\Data\JsonRestaurants.json";
+        //C:\Users\marti\Desktop\FisketorvetApp\FisketorvetApp\Data\JsonRestaurants.json
+        
+        string JsonFilePath = @"C:\Users\marti\Desktop\FisketorvetApp\FisketorvetApp\Data\JsonRestaurants.json";
         private List<Restaurant> restaurants;
 
         public ARestaurantJsonFile()
