@@ -10,7 +10,8 @@ namespace FisketorvetApp.Repositories
     public class AStoreJsonFile : IStoreRepository
     {
         //C:\Users\marti\Desktop\FisketorvetApp\FisketorvetApp\Data\JsonStores.json
-        
+        //Máté directory: E:\FUSKETORVUTUE\theashanti\FisketorvetApp\FisketorvetApp\Data\JsonStores.json
+
         string JsonFilePath = @"C:\Users\marti\Desktop\FisketorvetApp\FisketorvetApp\Data\JsonStores.json";
         private List<Store> stores;
 
