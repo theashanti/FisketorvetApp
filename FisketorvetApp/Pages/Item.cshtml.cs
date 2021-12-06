@@ -13,7 +13,9 @@ namespace FisketorvetApp.Pages
 {
     public class ItemModel : PageModel
     {
-       
+       [BindProperty(SupportsGet =true)]
+       public string Criteria { get; set; }
+
 
         [BindProperty]
         public List<Clothes> Items { get; set; } = new List<Clothes>();

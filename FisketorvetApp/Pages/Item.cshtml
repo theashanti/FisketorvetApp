@@ -19,43 +19,54 @@
     </div>
 </div>
 
-    <table class="table">
-        <thead>
-            <tr>
-                <th scope="col">Type</th>
-                <th scope="col">Name</th>
-                <th scope="col">Price</th>
-                <th scope="col">Gender</th>
-                <th scope="col">Size</th>
-                <th scope="col">Color</th>
-            </tr>
-        </thead>
-        <tbody>
-            @if (Model.Items != null)
+
+<div>
+    <form>
+        <p>
+            Search: <input type="text" asp-for="Criteria" />
+            <input type="submit" value="filter" />
+        </p>
+    </form>
+</div>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Type</th>
+            <th scope="col">Name</th>
+            <th scope="col">Price</th>
+            <th scope="col">Gender</th>
+            <th scope="col">Size</th>
+            <th scope="col">Color</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model.Items != null)
+        {
+            foreach (var item in Model.Items)
             {
-                foreach (var item in Model.Items)
-                {
-                    <tr>
-                        <td>
-                            @item.Type
-                        </td>
-                        <td>
-                            @item.Name
-                        </td>
-                        <td>
-                            @item.Price
-                        </td>
-                        <td>
-                            @item.Gender
-                        </td>
-                         <td>
-                            @item.Size
-                        </td>
-                        <td>
-                            @item.Color
-                        </td>
-                    </tr>
-                }
+                <tr>
+                    <td>
+                        @item.Type
+                    </td>
+                    <td>
+                        @item.Name
+                    </td>
+                    <td>
+                        @item.Price
+                    </td>
+                    <td>
+                        @item.Gender
+                    </td>
+                    <td>
+                        @item.Size
+                    </td>
+                    <td>
+                        @item.Color
+                    </td>
+                </tr>
             }
-        </tbody>
-    </table>
+        }
+    </tbody>
+</table>
