@@ -3,16 +3,16 @@ using FisketorvetApp.Helpers;
 using FisketorvetApp.Interfaces;
 using FisketorvetApp.Models;
 
-// Martin, Máté(modifications)
+// Martin
 
 namespace FisketorvetApp.Repositories
 {
-    public class AItemJsonFile : ClothesRepository
+    public class AClothesJsonFile : ClothesRepository
     {
         string JsonFilePath = @"E:\FUSKETORVUTUE\theashanti\FisketorvetApp\FisketorvetApp\Data\JsonClothes.json";
         private List<Clothes> items;
 
-        public AItemJsonFile()
+        public AClothesJsonFile()
         {
             items = JsonHelper.ReadItemFile(JsonFilePath);
         }

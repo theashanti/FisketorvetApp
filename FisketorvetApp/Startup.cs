@@ -28,7 +28,9 @@ namespace FisketorvetApp
             services.AddRazorPages();
             services.AddTransient<IUserRepository, UserJsonFile>();
             services.AddTransient<IStoreRepository, AStoreJsonFile>();
-            services.AddTransient<ClothesRepository, AItemJsonFile >();
+            services.AddTransient<ClothesRepository, AClothesJsonFile>();
+            services.AddTransient<IConsumablesRepository, AConsumableJsonFile>();
+            services.AddTransient<IRestaurantRepository, ARestaurantJsonFile>();
             services.AddSession();
             services.AddMemoryCache();
             

@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 
 
-//Máté(modifications)
+//Máté
 namespace FisketorvetApp.Pages
 {
     public class IndexModel : PageModel

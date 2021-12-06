@@ -1,0 +1,51 @@
+﻿@page
+@model FisketorvetApp.Pages.ConsumablesModel
+@{
+}
+<!--Máté-->
+
+<div class="container">
+    <h1 class="text-center">Name of restaurant</h1>
+    <div class="row text-center">
+        <div class="col-md-6">
+            <img class="" src="/wp-content/themes/creativeforces/images/majapic.jpg" width="250">
+            <h3 class="text-center">Name restaurant</h3>
+            <h3 class="text-center">Open from 2 to 3</h3>
+        </div>
+        <div class="col-md-6">
+            <p><strong>Restaurant name</strong> Description.</p>
+        </div>
+    </div>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Price</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model.Consumables != null)
+        {
+            foreach (var consumable in Model.Consumables)
+            {
+                <tr>
+                    <td>
+                        @consumable.Id
+                    </td>
+                    <td>
+                        @consumable.Name
+                    </td>
+                    <td>
+                        @consumable.Price
+                    </td>
+                    <td>
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>

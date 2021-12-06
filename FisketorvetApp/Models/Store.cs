@@ -7,10 +7,7 @@ namespace FisketorvetApp.Models
 {
     public class Store : AStore
     {
-        //new try
-       
-
-        //old
+        
         public Store(string name, int phoneNumber, string location, string openingHours) : base(name, phoneNumber, location, openingHours) 
         {
 

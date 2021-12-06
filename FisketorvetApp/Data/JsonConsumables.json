@@ -1,0 +1,32 @@
+[
+  {
+    "Id": 1,
+    "Name": "Hamburger",
+    "Price": 30,
+    "Size": "Medium",
+    "StoreName": "McDonalds"
+  },
+  {
+    "Id": 2,
+    "Name": "Pizza",
+    "Price": 90,
+    "Size": "Large",
+    "StoreName": "Dalle Valle"
+  },
+  {
+    "Id": 3,
+    "Name": "Cola",
+    "Price": 15,
+    "Size": "Medium",
+    "StoreName": "McDonalds"
+  },
+  {
+    "Id": 4,
+    "Name": "Wine",
+    "Price": 100,
+    "Size": "Medium",
+    "StoreName": "Dalle Valle"
+  }
+] 
+
+

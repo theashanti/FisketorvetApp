@@ -4,30 +4,27 @@ using System.Linq;
 using System.Threading.Tasks;
 using FisketorvetApp.Interfaces;
 using FisketorvetApp.Models;
-using FisketorvetApp.Repositories;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 //Máté
 namespace FisketorvetApp.Pages
 {
-    public class ItemModel : PageModel
+    public class ConsumablesModel : PageModel
     {
-       
-
         [BindProperty]
-        public List<Clothes> Items { get; set; } = new List<Clothes>();
+        public List<Consumable> Consumables { get; set; } = new List<Consumable>();
 
-        private ClothesRepository store;
-        public ItemModel(ClothesRepository itemService)
+        private IConsumablesRepository consumable;
+        public ConsumablesModel(IConsumablesRepository consumableServices)
         {
-            store = itemService;
+            consumable = consumableServices;
         }
 
         public void OnGet(string name)
         {
-            
-            Items = store.GetClothesForStore(name);
+
+            Consumables = consumable.GetConsumablesForRestaurant(name);
         }
     }
 }

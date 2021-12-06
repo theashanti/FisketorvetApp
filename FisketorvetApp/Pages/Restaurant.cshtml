@@ -2,3 +2,48 @@
 @model FisketorvetApp.Pages.RestaurantModel
 @{
 }
+<!--Máté-->
+
+<h1>Restaurants</h1>
+
+<div>
+    <form>
+        <p>
+            Search: <input type="text" asp-for="Criteria" />
+            <input type="submit" value="filter" />
+        </p>
+    </form>
+</div>
+<table class="table table-bordered table-hover table-striped">
+    <thead>
+        <tr>
+            <th> Name </th>
+            <th> Location </th>
+            <th> Opening Hours </th>
+        </tr>
+    </thead>
+    <tbody>
+        @*@foreach (var store in Model.Stores)
+            {
+
+               <tr>
+                   <td><a asp-area="" asp-page="/Restaurant">@store.Name</a></td>
+                   <td><a asp-area="" asp-page="/Restaurant">@store.Location</a></td>
+                   <td><a asp-area="" asp-page="/Restaurant">@store.OpeningHours</a></td>
+               </tr>
+            }*@
+        
+        @foreach (var restaurant in Model.Restaurants)
+        {
+
+            <tr>
+                <td><a asp-page="/Consumables" asp-route-name="@restaurant.Name">@restaurant.Name</a></td>
+                <td>@restaurant.Location</td>
+                <td>@restaurant.OpeningHours</td>
+
+            </tr>
+
+        }
+
+    </tbody>
+</table>
