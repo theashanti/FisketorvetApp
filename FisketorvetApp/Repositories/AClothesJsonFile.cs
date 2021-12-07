@@ -9,7 +9,7 @@ namespace FisketorvetApp.Repositories
 {
     public class AClothesJsonFile : ClothesRepository
     {
-        //C:\Users\marti\Desktop\FisketorvetApp\FisketorvetApp\Repositories\AClothesJsonFile.cs
+        //C:\Users\marti\Desktop\FisketorvetApp\FisketorvetApp\Data\JsonClothes.json
         //Máté directory: E:\FUSKETORVUTUE\theashanti\FisketorvetApp\FisketorvetApp\Data\JsonClothes.json
         //Ash C:\Users\ashan\OneDrive\Área de Trabalho\FisketorvetApp\FisketorvetApp\Data\JsonClothes.json
         // mitra: C:\Users\Uni\Source2\Repos\theashanti\FisketorvetApp\FisketorvetApp\Data\JsonClothes.json
