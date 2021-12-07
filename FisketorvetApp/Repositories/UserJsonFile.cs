@@ -79,6 +79,10 @@ namespace FisketorvetApp.Repositories
                         user.DateOfBirthMonth = u.DateOfBirthMonth;
                         user.DateOfBirthYear = u.DateOfBirthYear;
                         user.Password = u.Password;
+                        user.Address.Street = u.Address.Street;
+                        user.Address.HouseNumber = u.Address.HouseNumber;
+                        user.Address.PostalCode = u.Address.PostalCode;
+                        user.Address.City = u.Address.City;
                         JsonHelper.WriteUserFile(users, JsonFilePath);
                         break;
                     }
