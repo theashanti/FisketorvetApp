@@ -15,6 +15,9 @@ namespace FisketorvetApp.Pages
         [BindProperty]
         public List<Consumable> Consumables { get; set; } = new List<Consumable>();
 
+        [BindProperty(SupportsGet = true)]
+        public string Criteria { get; set; }
+
         private IConsumablesRepository consumable;
         public ConsumablesModel(IConsumablesRepository consumableServices)
         {
