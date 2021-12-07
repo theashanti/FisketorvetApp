@@ -6,7 +6,9 @@ namespace FisketorvetApp.Models
 {
     public class User
     {
-        public static int IdIncrementer { get; set; }
+        //public static int IdIncrementer { get; set; }
+
+        public Address Address { get; set; }
         
         public int Id { get; set; }
         
@@ -30,49 +32,16 @@ namespace FisketorvetApp.Models
         
         [Required]
         public int PhoneNumber { get; set;}
-        
-        //[Required, MaxLength(200)]
-        //public string Street { get; set;}
-        
-        //[Required]
-        //public int HouseNumber { get; set; }
-        
-        //[Required, Range(1000, 9999)]
-        //public int PostalCode { get; set; }
-        
-        //[Required , MaxLength(200)]
-        //public string City { get; set; }
-        
-        //[Required]
-        //public int CardNumber { get; set; }
-        
-        //[Required]
-        //public int ExpirationDate { get; set; }
-        
-        //[Required, Range(0, 999)]
-        //public int CSC { get; set; }
-        
+               
         public bool ClubMembership { get; set; }
 
-        /*public User(string name, string email, string password, int phoneNumber, 
-                    int dateOfBirthYear, int dateOfBirthMonth, int dateOfBirthDay)
-        {
-            Id += 1;
-            Name = name;
-            Email = email;
-            Password = password;
-            PhoneNumber = phoneNumber;
-            DateOfBirthYear = dateOfBirthYear;
-            DateOfBirthMonth = dateOfBirthMonth;
-            DateOfBirthDay = dateOfBirthDay;
-            ClubMembership = false;
-        }*/
+        //public User()
+        //{
+        //    //Id = IdIncrementer;
+        //    //IdIncrementer += 1;
+        //    //ClubMembership = false;
+        //    //Address = new Address();
+        //}
 
-        public User()
-        {
-            Id = IdIncrementer;
-            IdIncrementer += 1;
-            ClubMembership = false;
-        }
     }
 }

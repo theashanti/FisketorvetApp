@@ -1,85 +1,25 @@
 ﻿@page
-@model FisketorvetApp.Pages.CreateAccount
-
+@model FisketorvetApp.Pages.EditUserModel
 @{
 }
-
-<!DOCTYPE html>
-
-<!-- Martin -->
-
+<!-- Domantas -->
 <html>
 <head>
     <title></title>
 </head>
 <body>
-    <h2>Create account</h2>
+    <h2>Edit user information</h2>
     <form method="post">
-        @*<div class="container">
-            <div class="row">
-                <div class="col-sm-4">
-                    <div class="form-group">
-                        <label asp-for="@Model.User.Name" class="control-label">Name</label>
-                        <input asp-for="@Model.User.Name" class="form-control" />
-                        <span asp-validation-for="@Model.User.Name" class="text-danger"></span>
-                    </div>
-                </div>
-
-                <div class="col-sm-1">
-                    <div class="form-group">
-                        <label asp-for="@Model.User.DateOfBirthYear" class="control-label">Year</label>
-                        <input asp-for="@Model.User.DateOfBirthYear" class="form-control" />
-                        <span asp-validation-for="@Model.User.DateOfBirthYear" class="text-danger"></span>
-
-                    </div>
-                </div>
-                <div class="col-sm-1">
-                    <div class="form-group">
-                        <label asp-for="@Model.User.DateOfBirthMonth" class="control-label">Month</label>
-                        <input asp-for="@Model.User.DateOfBirthMonth" class="form-control" />
-                        <span asp-validation-for="@Model.User.DateOfBirthMonth" class="text-danger"></span>
-
-                    </div>
-                </div>
-                <div class="col-sm-1">
-                    <div class="form-group">
-                        <label asp-for="@Model.User.DateOfBirthDay" class="control-label">Day</label>
-                        <input asp-for="@Model.User.DateOfBirthDay" class="form-control" />
-                        <span asp-validation-for="@Model.User.DateOfBirthDay" class="text-danger"></span>
-
-                    </div>
-                </div>
-
-            </div>
-            <div class="form-group">
-                <label asp-for="@Model.User.PhoneNumber" class="control-label">Phone number</label>
-                <input asp-for="@Model.User.PhoneNumber" class="form-control" />
-                <span asp-validation-for="@Model.User.PhoneNumber" class="text-danger"></span>
-
-            </div>
-            <div class="form-group">
-                <label asp-for="@Model.User.Email" class="control-label">Email</label>
-                <input asp-for="@Model.User.Email" class="form-control" />
-                <span asp-validation-for="@Model.User.Email" class="text-danger"></span>
-
-            </div>
-
-            <div class="row">
-                <div class="col-sm-4">
-                    <div class="form-group">
-                        <label asp-for="@Model.User.Password" class="control-label">Password</label>
-                        <input asp-for="@Model.User.Password" class="form-control" />
-                        <span asp-validation-for="@Model.User.Password" class="text-danger"></span>
-                    </div>
-                </div>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create account" class="btn btn-primary" />
-            </div>
-
-        </div>*@
         <div class="container">
             <div class="row">
+
+                @*<div class="col-sm-4">
+                    <div class="form-group">
+                        <label asp-for="@Model.User.Id" class="control-label">Id</label>
+                        <input hidden="hidden" asp-for="@Model.User.Id" class="form-control" />
+                        <span asp-validation-for="@Model.User.Id" class="text-danger"></span>
+                    </div>
+                </div>*@
                 <div class="col-sm-4">
                     <div class="form-group">
                         <label asp-for="@Model.User.Name" class="control-label">Name</label>
@@ -141,6 +81,7 @@
                     <div class="form-group">
                         <label asp-for="@Model.User.Address.Street" class="control-label">Street</label>
                         <input asp-for="@Model.User.Address.Street" class="form-control" />
+                        @*<span asp-validation-for="@Model.User.Address.Street" class="text-danger"></span>*@
 
                     </div>
                 </div>
@@ -148,6 +89,7 @@
                     <div class="form-group">
                         <label asp-for="@Model.User.Address.HouseNumber" class="control-label">House number</label>
                         <input asp-for="@Model.User.Address.HouseNumber" class="form-control" />
+                        @*<span asp-validation-for="@Model.User.Address.HouseNumber" class="text-danger"></span>*@
 
                     </div>
                 </div>
@@ -157,6 +99,7 @@
                     <div class="form-group">
                         <label asp-for="@Model.User.Address.PostalCode" class="control-label">Postal Code</label>
                         <input asp-for="@Model.User.Address.PostalCode" class="form-control" />
+                        @*<span asp-validation-for="@Model.User.Address.PostalCode" class="text-danger"></span>*@
 
                     </div>
                 </div>
@@ -164,6 +107,7 @@
                     <div class="form-group">
                         <label asp-for="@Model.User.Address.City" class="control-label">City</label>
                         <input asp-for="@Model.User.Address.City" class="form-control" />
+                        @*<span asp-validation-for="@Model.User.Address.City" class="text-danger"></span>*@
 
                     </div>
                 </div>
@@ -173,7 +117,6 @@
             </div>
 
         </div>
-
 
 
     </form>

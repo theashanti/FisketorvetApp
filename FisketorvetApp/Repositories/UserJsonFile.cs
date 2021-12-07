@@ -9,19 +9,20 @@ namespace FisketorvetApp.Repositories
 {
     public class UserJsonFile : IUserRepository
     {
-        
+
         //C:\Users\marti\Desktop\FisketorvetApp\FisketorvetApp\Data\JsonUsers.json
         //Máté directory: E:\FUSKETORVUTUE\theashanti\FisketorvetApp\FisketorvetApp\Data\JsonUsers.json
         //Ash C:\Users\ashan\OneDrive\Área de Trabalho\FisketorvetApp\FisketorvetApp\Data\JsonUsers.json
         //mitra  C:\Users\Uni\Source2\Repos\theashanti\FisketorvetApp\FisketorvetApp\Data\JsonUsers.json
-        string JsonFilePath = @"C:\Users\ashan\OneDrive\Área de Trabalho\FisketorvetApp\FisketorvetApp\Data\JsonUsers.json";
+        //Dom: C:\Users\Lenovo\OneDrive - Zealand\Desktop\FisketorvetApp-master\FisketorvetApp\Data\JsonUsers.json
+        string JsonFilePath = @"C:\Users\Lenovo\OneDrive - Zealand\Desktop\FisketorvetApp-master\FisketorvetApp\Data\JsonUsers.json";
         private List<User> users;
 
         public UserJsonFile()
         {
             users = JsonHelper.ReadUserFile(JsonFilePath);
         }
-        
+
         public List<User> AllUsers()
         {
             return JsonHelper.ReadUserFile(JsonFilePath);
@@ -32,7 +33,7 @@ namespace FisketorvetApp.Repositories
             users.Add(user);
             JsonHelper.WriteUserFile(users, JsonFilePath);
         }
-        
+
 
         public List<User> Filter_By_StartCriteria(string criteria)
         {
@@ -51,15 +52,38 @@ namespace FisketorvetApp.Repositories
 
         public User GetUser(int id)
         {
-            foreach (User user in users)
+
+            {foreach (User user in users)
             {
                 if (user.Id == id)
                 {
+                    
                     return user;
                 }
-            }
-            
+            }}
+
             return null;
+        }
+        public void EditUser(User u)
+        {
+            if (u != null)
+            {
+                foreach (var user in users)
+                {
+                    if (user.Email== u.Email)
+                    {
+                        user.Email = u.Email;
+                        user.Name = u.Name;
+                        user.PhoneNumber = u.PhoneNumber;
+                        user.DateOfBirthDay = u.DateOfBirthDay;
+                        user.DateOfBirthMonth = u.DateOfBirthMonth;
+                        user.DateOfBirthYear = u.DateOfBirthYear;
+                        user.Password = u.Password;
+                        JsonHelper.WriteUserFile(users, JsonFilePath);
+                        break;
+                    }
+                }
+            }
         }
     }
 }

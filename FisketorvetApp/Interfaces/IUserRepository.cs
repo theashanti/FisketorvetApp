@@ -14,5 +14,7 @@ namespace FisketorvetApp.Interfaces
         public List<User> Filter_By_StartCriteria(string criteria);
 
         public User GetUser(int id);
+  
+        public void EditUser(User user);
     }
 }
