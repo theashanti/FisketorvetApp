@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 //Máté
 namespace FisketorvetApp.Models
 {
-    public class Restaurant : ARestaurant
+    public class Restaurant : AStore
     {
         public Restaurant(string name, int phoneNumber, string location, string openingHours) : base(name, phoneNumber, location, openingHours)
         {
