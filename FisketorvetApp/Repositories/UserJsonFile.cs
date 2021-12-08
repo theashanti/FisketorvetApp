@@ -70,7 +70,7 @@ namespace FisketorvetApp.Repositories
             {
                 foreach (var user in users)
                 {
-                    if (user.Email== u.Email)
+                    if (user.Id== u.Id)
                     {
                         user.Email = u.Email;
                         user.Name = u.Name;
