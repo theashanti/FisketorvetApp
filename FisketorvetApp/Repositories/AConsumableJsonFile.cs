@@ -11,7 +11,7 @@ namespace FisketorvetApp.Repositories
 {
     public class AConsumableJsonFile : IConsumablesRepository
     {
-        //C:\Users\marti\Desktop\FisketorvetApp\FisketorvetApp\Data\JsonClothes.json
+        //C:\Users\marti\Desktop\FisketorvetApp\FisketorvetApp\Data\JsonConsumables.json
         //Máté directory: E:\FUSKETORVUTUE\theashanti\FisketorvetApp\FisketorvetApp\Data\JsonConsumables.json
          //Ash C:\Users\ashan\OneDrive\Área de Trabalho\FisketorvetApp\FisketorvetApp\Data\JsonConsumables.json
          //mitra C:\Users\Uni\Source2\Repos\theashanti\FisketorvetApp\FisketorvetApp\Data\JsonConsumables.json
