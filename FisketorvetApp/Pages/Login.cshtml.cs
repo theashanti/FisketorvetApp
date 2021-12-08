@@ -43,6 +43,7 @@ namespace FisketorvetApp.Pages
                     {
                         HttpContext.Session.SetString("Name", user.Name);
                         HttpContext.Session.SetString("Membership", user.ClubMembership.ToString());
+                        HttpContext.Session.SetInt32("Id", user.Id);
 
                         return RedirectToPage("/Index");
                     }
