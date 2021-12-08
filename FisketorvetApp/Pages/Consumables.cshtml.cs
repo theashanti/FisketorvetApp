@@ -7,7 +7,7 @@ using FisketorvetApp.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-//Máté
+//Mï¿½tï¿½
 namespace FisketorvetApp.Pages
 {
     public class ConsumablesModel : PageModel
@@ -17,6 +17,8 @@ namespace FisketorvetApp.Pages
 
         [BindProperty(SupportsGet = true)]
         public string Criteria { get; set; }
+        
+        private static string storeQuery;
 
         private IConsumablesRepository consumable;
         public ConsumablesModel(IConsumablesRepository consumableServices)
@@ -26,8 +28,19 @@ namespace FisketorvetApp.Pages
 
         public void OnGet(string name)
         {
-
-            Consumables = consumable.GetConsumablesForRestaurant(name);
+            if (name != null)
+            {
+                storeQuery = name;
+            }
+            
+            if (String.IsNullOrEmpty(Criteria))
+            {
+                Consumables = consumable.GetConsumablesForRestaurant(storeQuery);
+            }
+            else
+            {
+                Consumables = consumable.Filter_By_StartCriteria(Criteria);
+            }
         }
     }
 }

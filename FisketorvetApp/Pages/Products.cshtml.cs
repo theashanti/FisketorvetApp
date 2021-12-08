@@ -8,28 +8,40 @@ using FisketorvetApp.Repositories;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-//Máté
+//Mï¿½tï¿½
 namespace FisketorvetApp.Pages
 {
-    public class ItemModel : PageModel
+    public class ProductModel : PageModel
     {
        [BindProperty(SupportsGet =true)]
        public string Criteria { get; set; }
-
-
+       
+       private static string storeQuery;
+       
         [BindProperty]
         public List<Clothes> Items { get; set; } = new List<Clothes>();
 
         private ClothesRepository store;
-        public ItemModel(ClothesRepository itemService)
+        public ProductModel(ClothesRepository itemService)
         {
             store = itemService;
         }
 
         public void OnGet(string name)
         {
+            if (name != null)
+            {
+                storeQuery = name;
+            }
             
-            Items = store.GetClothesForStore(name);
+            if (String.IsNullOrEmpty(Criteria))
+            {
+                Items = store.GetClothesForStore(storeQuery);
+            }
+            else
+            {
+                Items = store.Filter_By_StartCriteria(Criteria);
+            }
         }
     }
 }
