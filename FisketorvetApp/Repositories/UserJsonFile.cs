@@ -15,7 +15,7 @@ namespace FisketorvetApp.Repositories
         //Ash C:\Users\ashan\OneDrive\Área de Trabalho\FisketorvetApp\FisketorvetApp\Data\JsonUsers.json
         //mitra  C:\Users\Uni\Source2\Repos\theashanti\FisketorvetApp\FisketorvetApp\Data\JsonUsers.json
         //Dom: C:\Users\Lenovo\OneDrive - Zealand\Desktop\FisketorvetApp-master\FisketorvetApp\Data\JsonUsers.json
-        string JsonFilePath = @"C:\Users\Lenovo\OneDrive - Zealand\Desktop\FisketorvetApp-master\FisketorvetApp\Data\JsonUsers.json";
+        string JsonFilePath = @"C:\Users\marti\Desktop\FisketorvetApp\FisketorvetApp\Data\JsonUsers.json";
         private List<User> users;
 
         public UserJsonFile()
@@ -64,30 +64,10 @@ namespace FisketorvetApp.Repositories
 
             return null;
         }
-        public void EditUser(User u)
+
+        public void WriteChanges()
         {
-            if (u != null)
-            {
-                foreach (var user in users)
-                {
-                    if (user.Id== u.Id)
-                    {
-                        user.Email = u.Email;
-                        user.Name = u.Name;
-                        user.PhoneNumber = u.PhoneNumber;
-                        user.DateOfBirthDay = u.DateOfBirthDay;
-                        user.DateOfBirthMonth = u.DateOfBirthMonth;
-                        user.DateOfBirthYear = u.DateOfBirthYear;
-                        user.Password = u.Password;
-                        user.Address.Street = u.Address.Street;
-                        user.Address.HouseNumber = u.Address.HouseNumber;
-                        user.Address.PostalCode = u.Address.PostalCode;
-                        user.Address.City = u.Address.City;
-                        JsonHelper.WriteUserFile(users, JsonFilePath);
-                        break;
-                    }
-                }
-            }
+            JsonHelper.WriteUserFile(users, JsonFilePath);
         }
     }
 }

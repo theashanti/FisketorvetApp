@@ -15,6 +15,6 @@ namespace FisketorvetApp.Interfaces
 
         public User GetUser(int id);
   
-        public void EditUser(User user);
+        public void WriteChanges();
     }
 }

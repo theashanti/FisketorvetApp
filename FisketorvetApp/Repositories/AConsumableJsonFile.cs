@@ -16,7 +16,7 @@ namespace FisketorvetApp.Repositories
          //Ash C:\Users\ashan\OneDrive\Área de Trabalho\FisketorvetApp\FisketorvetApp\Data\JsonConsumables.json
          //mitra C:\Users\Uni\Source2\Repos\theashanti\FisketorvetApp\FisketorvetApp\Data\JsonConsumables.json
          //Dom: C:\Users\Lenovo\OneDrive - Zealand\Desktop\FisketorvetApp-master\FisketorvetApp\Data\JsonConsumables.json
-        string JsonFilePath = @"C:\Users\Lenovo\OneDrive - Zealand\Desktop\FisketorvetApp-master\FisketorvetApp\Data\JsonConsumables.json";
+        string JsonFilePath = @"C:\Users\marti\Desktop\FisketorvetApp\FisketorvetApp\Data\JsonConsumables.json";
         private List<Consumable> consumables;
 
         public AConsumableJsonFile()
