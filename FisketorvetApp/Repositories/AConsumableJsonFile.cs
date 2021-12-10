@@ -16,7 +16,7 @@ namespace FisketorvetApp.Repositories
          //Ash C:\Users\ashan\OneDrive\Área de Trabalho\FisketorvetApp\FisketorvetApp\Data\JsonConsumables.json
          //mitra C:\Users\Uni\Source2\Repos\theashanti\FisketorvetApp\FisketorvetApp\Data\JsonConsumables.json
          //Dom: C:\Users\Lenovo\OneDrive - Zealand\Desktop\FisketorvetApp-master\FisketorvetApp\Data\JsonConsumables.json
-        string JsonFilePath = @"C:\Users\Lenovo\OneDrive - Zealand\Desktop\FisketorvetApp-master\FisketorvetApp\Data\JsonConsumables.json";
+        string JsonFilePath = @"E:\mi a faszom van már\theashanti\FisketorvetApp\FisketorvetApp\Data\JsonConsumables.json";
         private List<Consumable> consumables;
 
         public AConsumableJsonFile()
@@ -44,11 +44,11 @@ namespace FisketorvetApp.Repositories
         }
 
 
-        public List<Consumable> Filter_By_StartCriteria(string criteria)
+        public List<Consumable> Filter_By_StartCriteria(string criteria, List<Consumable>gh)
         {
             List<Consumable> filteredItems = new List<Consumable>();
 
-            foreach (Consumable consumable in consumables)
+            foreach (Consumable consumable in gh)
             {
                 if (consumable.Name.StartsWith(criteria))
                 {
