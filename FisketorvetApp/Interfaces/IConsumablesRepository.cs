@@ -14,7 +14,7 @@ namespace FisketorvetApp.Interfaces
 
         public List<Consumable> GetConsumablesForRestaurant(string name);
 
-        public List<Consumable> Filter_By_StartCriteria(string criteria);
+        public List<Consumable> Filter_By_StartCriteria(string criteria, List<Consumable>edibles);
 
         public Consumable GetConsumable(int id);
     }

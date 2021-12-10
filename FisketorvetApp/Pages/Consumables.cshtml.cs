@@ -39,7 +39,8 @@ namespace FisketorvetApp.Pages
             }
             else
             {
-                Consumables = consumable.Filter_By_StartCriteria(Criteria);
+                Consumables = consumable.GetConsumablesForRestaurant(storeQuery);
+                Consumables = consumable.Filter_By_StartCriteria(Criteria, Consumables);
             }
         }
     }

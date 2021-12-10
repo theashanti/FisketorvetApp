@@ -15,7 +15,7 @@ namespace FisketorvetApp.Interfaces
         
         public List<Clothes> GetClothesForStore(string name);
 
-        public List<Clothes> Filter_By_StartCriteria(string criteria);
+        public List<Clothes> Filter_By_StartCriteria(string criteria, List<Clothes> clothes);
 
         public Clothes GetItem(int id);
     }

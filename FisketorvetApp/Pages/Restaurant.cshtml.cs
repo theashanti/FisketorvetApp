@@ -31,6 +31,7 @@ namespace FisketorvetApp.Pages
             }
             else
             {
+
                 Restaurants = restaurants.Filter_By_StartCriteria(Criteria);
             }
         }
