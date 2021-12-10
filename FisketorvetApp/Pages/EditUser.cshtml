@@ -72,6 +72,10 @@
                         <label asp-for="@Model.EditAccountViewModel.ConfirmPassword" class="control-label">Enter password again</label>
                         <input asp-for="@Model.EditAccountViewModel.ConfirmPassword" class="form-control"/>
                         <span asp-validation-for="@Model.EditAccountViewModel.ConfirmPassword" class="text-danger"></span>
+                        @if (Model.EditAccountViewModel.Password != Model.EditAccountViewModel.ConfirmPassword)
+                        {
+                            <p>Your passwords don't match</p>
+                        }
                     </div>
                 </div>
             </div>

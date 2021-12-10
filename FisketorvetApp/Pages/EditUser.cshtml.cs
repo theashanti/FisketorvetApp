@@ -49,24 +49,27 @@ namespace FisketorvetApp.Pages
         {
             if (ModelState.IsValid)
             {
-                users.GetUser(userId).Name = EditAccountViewModel.Name;
-                users.GetUser(userId).Email = EditAccountViewModel.Email;
-                users.GetUser(userId).Password = EditAccountViewModel.Password;
-                users.GetUser(userId).ClubMembership = EditAccountViewModel.ClubMembership;
-                users.GetUser(userId).PhoneNumber = EditAccountViewModel.PhoneNumber;
-                users.GetUser(userId).DateOfBirthDay = EditAccountViewModel.DateOfBirthDay;
-                users.GetUser(userId).DateOfBirthMonth = EditAccountViewModel.DateOfBirthMonth;
-                users.GetUser(userId).DateOfBirthYear = EditAccountViewModel.DateOfBirthYear;
-                users.GetUser(userId).Street = EditAccountViewModel.Street;
-                users.GetUser(userId).HouseNumber  =  EditAccountViewModel.HouseNumber;
-                users.GetUser(userId).PostalCode = EditAccountViewModel.PostalCode;
-                users.GetUser(userId).City = EditAccountViewModel.City;
-                users.WriteChanges();
+                if (EditAccountViewModel.Password.Equals(EditAccountViewModel.ConfirmPassword))
+                {
+                    users.GetUser(userId).Name = EditAccountViewModel.Name;
+                    users.GetUser(userId).Email = EditAccountViewModel.Email;
+                    users.GetUser(userId).Password = EditAccountViewModel.Password;
+                    users.GetUser(userId).ClubMembership = EditAccountViewModel.ClubMembership;
+                    users.GetUser(userId).PhoneNumber = EditAccountViewModel.PhoneNumber;
+                    users.GetUser(userId).DateOfBirthDay = EditAccountViewModel.DateOfBirthDay;
+                    users.GetUser(userId).DateOfBirthMonth = EditAccountViewModel.DateOfBirthMonth;
+                    users.GetUser(userId).DateOfBirthYear = EditAccountViewModel.DateOfBirthYear;
+                    users.GetUser(userId).Street = EditAccountViewModel.Street;
+                    users.GetUser(userId).HouseNumber  =  EditAccountViewModel.HouseNumber;
+                    users.GetUser(userId).PostalCode = EditAccountViewModel.PostalCode;
+                    users.GetUser(userId).City = EditAccountViewModel.City;
+                    users.WriteChanges();
                 
-                HttpContext.Session.SetString("Name", EditAccountViewModel.Name);
-                HttpContext.Session.SetString("Membership", EditAccountViewModel.ClubMembership.ToString());
+                    HttpContext.Session.SetString("Name", EditAccountViewModel.Name);
+                    HttpContext.Session.SetString("Membership", EditAccountViewModel.ClubMembership.ToString());
                
-                return RedirectToPage("Index");
+                    return RedirectToPage("Index");
+                }
             }
             return Page();
         }
