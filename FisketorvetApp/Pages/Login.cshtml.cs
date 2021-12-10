@@ -22,6 +22,8 @@ namespace FisketorvetApp.Pages
 
         public User User { get; set; } = new User();
 
+        public string ErrorMessage { get; set; }
+
         private IUserRepository users;
         public LoginModel(IUserRepository userService)
         {
@@ -47,10 +49,15 @@ namespace FisketorvetApp.Pages
 
                         return RedirectToPage("/Index");
                     }
+                    else
+                    {
+                        ErrorMessage = "This account does not exist";
+                    }
                     
                 }
                 
             }
+
             return Page();
         }
     }
