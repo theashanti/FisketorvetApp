@@ -39,6 +39,7 @@
             <th scope="col">Gender</th>
             <th scope="col">Size</th>
             <th scope="col">Color</th>
+            <th scope="col">Add Item To Cart</th>
         </tr>
     </thead>
     <tbody>
@@ -46,26 +47,29 @@
         {
             foreach (var item in Model.Items)
             {
-                <tr>
-                    <td>
-                        @item.Type
-                    </td>
-                    <td>
-                        @item.Name
-                    </td>
-                    <td>
-                        @item.Price
-                    </td>
-                    <td>
-                        @item.Gender
-                    </td>
-                    <td>
-                        @item.Size
-                    </td>
-                    <td>
-                        @item.Color
-                    </td>
-                </tr>
+        <tr>
+            <td>
+                @item.Type
+            </td>
+            <td>
+                @item.Name
+            </td>
+            <td>
+                @item.Price
+            </td>
+            <td>
+                @item.Gender
+            </td>
+            <td>
+                @item.Size
+            </td>
+            <td>
+                @item.Color
+            </td>
+            <td>
+                <a asp-page="/Products" asp-route-id="@item.Id">AddItem</a>
+            </td>
+        </tr>
             }
         }
     </tbody>

@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using FisketorvetApp.Interfaces;
 using FisketorvetApp.Models;
 using FisketorvetApp.Repositories;
+
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
@@ -21,18 +22,22 @@ namespace FisketorvetApp.Pages
        
         [BindProperty]
         public List<Clothes> Items { get; set; } = new List<Clothes>();
+
         
         private ClothesRepository store;
-        private IStoreRepository storesa;
-        public ProductModel(ClothesRepository itemService, IStoreRepository storesaService)
+        private IShoppingCartRepository cart;
+        public ProductModel(ClothesRepository itemService, IShoppingCartRepository cartServices)
         {
             store = itemService;
-            storesa = storesaService;
+            cart = cartServices;
         }
 
-        public void OnGet(string name)
+        public void OnGet(string name, int id)
         {
-            
+            if(id != 0)
+            {
+                cart.AddItem(store.GetItem(id));
+            }
 
             if (name != null)
             {

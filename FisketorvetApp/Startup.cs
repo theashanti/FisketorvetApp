@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using FisketorvetApp.Interfaces;
+using FisketorvetApp.Models;
 using FisketorvetApp.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -31,6 +32,7 @@ namespace FisketorvetApp
             services.AddTransient<ClothesRepository, AClothesJsonFile>();
             services.AddTransient<IConsumablesRepository, AConsumableJsonFile>();
             services.AddTransient<IRestaurantRepository, ARestaurantJsonFile>();
+            services.AddSingleton<IShoppingCartRepository, ShoppingCart>();
             services.AddSession();
             services.AddMemoryCache();
             
