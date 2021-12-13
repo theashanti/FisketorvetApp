@@ -9,8 +9,10 @@ namespace FisketorvetApp.Pages
 {
     public class ShoppingCartModel : PageModel
     {
+        
         public void OnGet()
         {
+
         }
     }
 }
