@@ -3,9 +3,120 @@
 @{
 }
 
-<li class="nav-item">
-    <a class="nav-link text-dark" asp-area="" asp-page="/Store">Store</a>
-</li> <li class="nav-item">
-    <a class="nav-link text-dark" asp-area="" asp-page="/Store">Restaurant</a>
+<h1>Cart</h1>
 
-</li>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col mb-2" style="border:1px solid #cecece;">
+            <div class="title">
+                <h3><b>Shopping Cart</b></h3>
+            </div>
+
+            <div class="title">
+                <h5><b>Products</b></h5>
+            </div>
+            <div class="table-responsive px-md-4 px-2 pt-3">
+                <table class="table table-borderless">
+                    <tbody>
+                        <tr class="border-bottom">
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <div class="ps-3 d-flex flex-column justify-content">
+                                        <p class="fw-bold">Air<span class="ps-1">Red</span><span class="ps-1">Pants</span></p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex">
+                                    <p class="pe-3"> <span class=" text-muted">Color:</span> <span class=" fw-bold">Red/White</span></p>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex">
+                                    <p class="pe-3"><span class=" text-muted">Size:</span> <span class=" fw-bold">L</span></p>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex">
+                                    <p class="pe-3"><span class="red">$45.00</span></p>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <div class="round"> <span class="close">&#10005;</span> </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h5><b>Consumables</b></h5>
+            <div class="table-responsive px-md-4 px-2 pt-3">
+                <table class="table table-borderless">
+                    <tbody>
+                        <tr class="border-bottom">
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <div class="ps-3 d-flex flex-column justify-content">
+                                        <p class="fw-bold">Air<span class="ps-1">Red</span><span class="ps-1">Pants</span></p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex">
+                                    <p class="pe-3"><span class="red">$45.00</span></p>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <div class="round"> <span class="close">&#10005;</span> </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col mb-2" style="border:1px solid #cecece;">
+            <div class="row main">
+                <div class="col-12"><h2>Total price</h2></div>
+            </div>
+
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item d-flex">
+                    <div class="col-sm-8 col-12">
+                        <h5>Grand Total:</h5>
+                    </div>
+                    <div class="col-sm-4 col-12 ">
+                        <h5>&#36;1,449.00</h5>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="row main">
+                        <div class="col-12"><h5>Select payment method</h5></div>
+                    </div>
+                    <div class="row justify-content-center mrow">
+                        <div class="text-center">
+                            <button>
+                                <img src="https://img.icons8.com/color/48/000000/mastercard-logo.png" width="35" height="35" alt="Submit Form">
+                            </button>
+                            <button>
+                                <img src="https://img.icons8.com/color/48/000000/visa.png" width="35" height="35" alt="Submit Form">
+                            </button>
+                            <button>
+                                <img src="https://img.icons8.com/color/48/000000/paypal.png" width="35" height="35" alt="Submit Form">
+                            </button>
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="row mt-3">
+                        <div class="col-sm-12"> <button type="button" class="btn btn-primary mr-2 btn-block">Pay</button> </div>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</div>
