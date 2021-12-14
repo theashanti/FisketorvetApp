@@ -16,7 +16,7 @@ namespace FisketorvetApp.Repositories
         //Ash C:\Users\ashan\OneDrive\Área de Trabalho\FisketorvetApp\FisketorvetApp\Data\JsonRestaurants.json
         //mitra C:\Users\Uni\Source2\Repos\theashanti\FisketorvetApp\FisketorvetApp\Data\JsonRestaurants.json
         //Dom: C:\Users\Lenovo\OneDrive - Zealand\GitHub\FisketorvetApp\FisketorvetApp\Data\JsonRestaurants.json
-        string JsonFilePath = @"C:\Users\Martin\Desktop\FisketorvetApp\FisketorvetApp\Data\JsonRestaurants.json";
+        string JsonFilePath = @"C:\Users\ashan\OneDrive\Área de Trabalho\FisketorvetApp\FisketorvetApp\Data\JsonRestaurants.json";
         private List<Restaurant> restaurants;
 
         public ARestaurantJsonFile()
