@@ -1,4 +1,5 @@
 ﻿@page
+@using Microsoft.AspNetCore.Http
 @model FisketorvetApp.Pages.ConsumablesModel
 @{
 }
@@ -51,9 +52,12 @@
                     <td>
                         @consumable.Price
                     </td>
-                    <td>
-                        <a asp-page="/Consumables" asp-route-id="@consumable.Id" asp-route-iname="@consumable.Name">AddItem</a>
-                    </td>
+                    @if (HttpContext.Session.GetString("Name") != null)
+                    {
+                        <td>
+                            <a asp-page="/Consumables" asp-route-id="@consumable.Id" asp-route-iname="@consumable.Name">Add to cart</a>
+                        </td>
+                    }
                 </tr>
             }
         }

@@ -1,4 +1,5 @@
 ﻿@page
+@using Microsoft.AspNetCore.Http
 @model FisketorvetApp.Pages.ProductModel
 @{
 }
@@ -39,7 +40,6 @@
             <th scope="col">Gender</th>
             <th scope="col">Size</th>
             <th scope="col">Color</th>
-            <th scope="col">Add Item To Cart</th>
         </tr>
     </thead>
     <tbody>
@@ -66,9 +66,12 @@
             <td>
                 @item.Color
             </td>
-            <td>
-                <a asp-page="/Products" asp-route-id="@item.Id" asp-route-iname="@item.Name">AddItem</a>
-            </td>
+            @if (HttpContext.Session.GetString("Name") != null)
+            {
+                <td>
+                    <a asp-page="/Products" asp-route-id="@item.Id" asp-route-iname="@item.Name">Add to cart</a>
+                </td>
+            }
         </tr>
             }
         }
