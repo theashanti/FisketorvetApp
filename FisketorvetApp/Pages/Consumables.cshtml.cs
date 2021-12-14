@@ -21,13 +21,20 @@ namespace FisketorvetApp.Pages
         private static string storeQuery;
 
         private IConsumablesRepository consumable;
-        public ConsumablesModel(IConsumablesRepository consumableServices)
+        private IShoppingCartRepository cart;
+        public ConsumablesModel(IConsumablesRepository consumableServices, IShoppingCartRepository cartServices)
         {
             consumable = consumableServices;
+            cart = cartServices;
         }
 
-        public void OnGet(string name)
+        public void OnGet(string name, int id, string iname)
         {
+            if (id != 0)
+            {
+                cart.AddItem(consumable.GetConsumable(id, iname));
+            }
+
             if (name != null)
             {
                 storeQuery = name;

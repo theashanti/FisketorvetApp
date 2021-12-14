@@ -16,6 +16,6 @@ namespace FisketorvetApp.Interfaces
 
         public List<Consumable> Filter_By_StartCriteria(string criteria, List<Consumable>edibles);
 
-        public Consumable GetConsumable(int id);
+        public Consumable GetConsumable(int id, string name);
     }
 }

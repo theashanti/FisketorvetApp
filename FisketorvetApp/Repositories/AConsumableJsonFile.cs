@@ -59,11 +59,11 @@ namespace FisketorvetApp.Repositories
             return filteredItems;
         }
 
-        public Consumable GetConsumable(int id)
+        public Consumable GetConsumable(int id, string name)
         {
             foreach (Consumable consumable in consumables)
             {
-                if (consumable.Id == id)
+                if (consumable.Id == id && consumable.Name == name)
                 {
                     return consumable;
                 }

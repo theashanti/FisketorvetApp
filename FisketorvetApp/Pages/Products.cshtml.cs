@@ -32,11 +32,11 @@ namespace FisketorvetApp.Pages
             cart = cartServices;
         }
 
-        public void OnGet(string name, int id)
+        public void OnGet(string name, int id, string iname)
         {
             if(id != 0)
             {
-                cart.AddItem(store.GetItem(id));
+                cart.AddItem(store.GetItem(id, iname));
             }
 
             if (name != null)

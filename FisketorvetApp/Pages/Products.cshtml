@@ -67,7 +67,7 @@
                 @item.Color
             </td>
             <td>
-                <a asp-page="/Products" asp-route-id="@item.Id">AddItem</a>
+                <a asp-page="/Products" asp-route-id="@item.Id" asp-route-iname="@item.Name">AddItem</a>
             </td>
         </tr>
             }

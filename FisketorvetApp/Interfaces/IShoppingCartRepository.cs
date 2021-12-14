@@ -11,6 +11,9 @@ namespace FisketorvetApp.Interfaces
         public void AddItem(AItem item);
 
         public void DeleteItem(AItem item);
-        public int CalculateTotalPrice(User user, List<AItem> items);
+        //public int CalculateTotalPrice(User user, List<AItem> items);
+
+        public List<AItem> GetAllItems();
+        public int TotaluPricu();
     }
 }

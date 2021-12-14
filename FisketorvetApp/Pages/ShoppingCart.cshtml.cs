@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using FisketorvetApp.Interfaces;
+using FisketorvetApp.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
@@ -10,7 +11,13 @@ namespace FisketorvetApp.Pages
 {
     public class ShoppingCartModel : PageModel
     {
+        [BindProperty]
+        public List<AItem> Items { get; set; } = new List<AItem>();
+
+        public int Total { get; set; }
+
         private ClothesRepository store;
+        
         private IShoppingCartRepository cart;
         private IConsumablesRepository restaurant;
         public ShoppingCartModel(ClothesRepository itemService, IShoppingCartRepository cartServices, IConsumablesRepository restaurantServices)
@@ -18,21 +25,26 @@ namespace FisketorvetApp.Pages
             store = itemService;
             cart = cartServices;
             restaurant = restaurantServices;
+            //Items=new List<AItem>() { new Consumable(2, "Pizza", 90, "Large", "Dalle Valle") };
         }
 
-        public void OnGet(int id)
+        public void OnGet(int id, string name)
         {
             if(id != 0)
             {
-                if(store.GetItem(id) == null)
+                if(store.GetItem(id, name) == null)
                 {
-                    cart.DeleteItem(restaurant.GetConsumable(id));
+                    cart.DeleteItem(restaurant.GetConsumable(id, name));
                 }
                 else
                 {
-                    cart.DeleteItem(store.GetItem(id));
+                    cart.DeleteItem(store.GetItem(id, name));
                 }
+                Items = cart.GetAllItems();
             }
+            Items = cart.GetAllItems();
+
+            Total = cart.TotaluPricu();
         }
     }
 }

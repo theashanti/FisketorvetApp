@@ -57,11 +57,11 @@ namespace FisketorvetApp.Repositories
             return filteredItems;
         }
 
-        public Clothes GetItem(int id)
+        public Clothes GetItem(int id, string name)
         {
             foreach (Clothes item in items)
             {
-                if (item.Id == id)
+                if (item.Id == id && item.Name == name)
                 {
                     return item;
                 }
