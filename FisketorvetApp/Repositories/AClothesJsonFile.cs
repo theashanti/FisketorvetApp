@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using FisketorvetApp.Helpers;
 using FisketorvetApp.Interfaces;
 using FisketorvetApp.Models;
@@ -14,7 +15,7 @@ namespace FisketorvetApp.Repositories
         //Ash C:\Users\ashan\OneDrive\Área de Trabalho\FisketorvetApp\FisketorvetApp\Data\JsonClothes.json
         // mitra: C:\Users\Uni\Source2\Repos\theashanti\FisketorvetApp\FisketorvetApp\Data\JsonClothes.json
         // Dom : C:\Users\Lenovo\OneDrive - Zealand\GitHub\FisketorvetApp\FisketorvetApp\Data\JsonClothes.json
-        string JsonFilePath = @"C:\Users\Lenovo\OneDrive - Zealand\GitHub\FisketorvetApp\FisketorvetApp\Data\JsonClothes.json";
+        string JsonFilePath = @"C:\Users\Martin\Desktop\FisketorvetApp\FisketorvetApp\Data\JsonClothes.json";
         private List<Clothes> items;
 
         public AClothesJsonFile()
@@ -48,7 +49,7 @@ namespace FisketorvetApp.Repositories
 
             foreach (Clothes item in ig)
             {
-                if (item.Name.StartsWith(criteria))
+                if (item.Name.StartsWith(criteria, StringComparison.CurrentCultureIgnoreCase))
                 {
                     filteredItems.Add(item);
                 }
