@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using FisketorvetApp.Interfaces;
 using FisketorvetApp.Models;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
@@ -39,9 +40,12 @@ namespace FisketorvetApp.Pages
         {
             if (ModelState.IsValid)
             {
+                PasswordHasher<string> pw = new PasswordHasher<string>();
+                
                 foreach (User user in users.AllUsers())
                 {
-                    if (Email.Equals(user.Email) && Password.Equals(user.Password))
+                   var verificationResult = pw.VerifyHashedPassword(Email, user.Password, Password);
+                    if (Email.Equals(user.Email) && verificationResult == PasswordVerificationResult.Success)
                     {
                         HttpContext.Session.SetString("Name", user.Name);
                         HttpContext.Session.SetString("Membership", user.ClubMembership.ToString());

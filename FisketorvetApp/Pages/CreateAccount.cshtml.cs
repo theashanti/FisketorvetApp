@@ -1,6 +1,7 @@
 ﻿using FisketorvetApp.Interfaces;
 using FisketorvetApp.Models;
 using FisketorvetApp.ViewModels;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
@@ -32,13 +33,15 @@ namespace FisketorvetApp.Pages
                     User user = new User();
                     user.Name = CreateAccountViewModel.Name;
                     user.Email = CreateAccountViewModel.Email;
-                    user.Password = CreateAccountViewModel.Password;
+                    PasswordHasher<string> pw = new PasswordHasher<string>();
+                    user.Password = pw.HashPassword(CreateAccountViewModel.Email, CreateAccountViewModel.Password);
                     user.ClubMembership = CreateAccountViewModel.ClubMembership;
                     user.PhoneNumber = CreateAccountViewModel.PhoneNumber;
                     user.DateOfBirthDay = CreateAccountViewModel.DateOfBirthDay;
                     user.DateOfBirthMonth = CreateAccountViewModel.DateOfBirthMonth;
                     user.DateOfBirthYear = CreateAccountViewModel.DateOfBirthYear;
                     user.Id = users.AllUsers().Count + 1;
+                    
                     users.AddUser(user);
                     return RedirectToPage("/Index");
                 }

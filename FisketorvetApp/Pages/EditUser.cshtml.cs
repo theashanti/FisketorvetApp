@@ -6,6 +6,7 @@ using FisketorvetApp.Interfaces;
 using FisketorvetApp.Models;
 using FisketorvetApp.ViewModels;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
@@ -31,8 +32,8 @@ namespace FisketorvetApp.Pages
             User = users.GetUser(id);
             EditAccountViewModel.Name = User.Name;
             EditAccountViewModel.Email = User.Email;
-            EditAccountViewModel.Password = User.Password;
-            EditAccountViewModel.ConfirmPassword = User.Password;
+            EditAccountViewModel.Password = "";
+            EditAccountViewModel.ConfirmPassword = "";
             EditAccountViewModel.ClubMembership = User.ClubMembership;
             EditAccountViewModel.PhoneNumber = User.PhoneNumber;
             EditAccountViewModel.DateOfBirthDay = User.DateOfBirthDay;
@@ -53,7 +54,8 @@ namespace FisketorvetApp.Pages
                 {
                     users.GetUser(userId).Name = EditAccountViewModel.Name;
                     users.GetUser(userId).Email = EditAccountViewModel.Email;
-                    users.GetUser(userId).Password = EditAccountViewModel.Password;
+                    PasswordHasher<string> pw = new PasswordHasher<string>();
+                    users.GetUser(userId).Password = pw.HashPassword(EditAccountViewModel.Email, EditAccountViewModel.Password);
                     users.GetUser(userId).ClubMembership = EditAccountViewModel.ClubMembership;
                     users.GetUser(userId).PhoneNumber = EditAccountViewModel.PhoneNumber;
                     users.GetUser(userId).DateOfBirthDay = EditAccountViewModel.DateOfBirthDay;
