@@ -39,7 +39,7 @@
 
                                 @if (HttpContext.Session.GetString("Name") != null)
                                 {
-                                <a class="btn btn-info" asp-page="/Products" asp-route-id="@item.Id" asp-route-iname="@item.Name">Add to cart</a>
+                                <a class="btn btn-info" asp-page="/Products" asp-route-id="@item.Id" asp-route-iname="@item.Name" onclick="showMessage()">Add to cart</a>
                                 }
                             </div>
 
@@ -50,3 +50,7 @@
         }
     </div>
 </div>
+
+<script>
+    function showMessage() { alert("Item added to cart.");}
+</script>
