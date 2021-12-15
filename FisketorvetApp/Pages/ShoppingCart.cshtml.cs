@@ -25,7 +25,6 @@ namespace FisketorvetApp.Pages
             store = itemService;
             cart = cartServices;
             restaurant = restaurantServices;
-            //Items=new List<AItem>() { new Consumable(2, "Pizza", 90, "Large", "Dalle Valle") };
         }
 
         public void OnGet(int id, string name)

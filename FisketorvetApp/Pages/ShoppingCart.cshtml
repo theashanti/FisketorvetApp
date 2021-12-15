@@ -22,7 +22,7 @@
                             <td>
                                 <div class="d-flex align-items-center">
                                     <div class="ps-3 d-flex flex-column justify-content">
-                                        <p class="fw-bold">@item.Name</p>
+                                        <p class="font-weight-bold" style="color: #efb0c6; text-decoration: none;" class="fw-bold">@item.Name</p>
                                     </div>
                                 </div>
                             </td>
@@ -32,11 +32,8 @@
                                 </div>
                             </td>
                             <td>
-                                @*<div class="d-flex align-items-center">
-                                    <div class="round"><a asp-page="/ShoppingCart" asp-route-id="@item.Id"><span class="close">&#10005;</span></a></div>
-                                </div>*@
-                                <a asp-page="/ShoppingCart" asp-route-id="@item.Id" asp-route-name="@item.Name">X</a>
-                                
+                                <a class="btn btn-danger" asp-page="/ShoppingCart" asp-route-id="@item.Id" asp-route-name="@item.Name">&#10005;</a>
+
                             </td>
                         </tr>
                     </tbody>

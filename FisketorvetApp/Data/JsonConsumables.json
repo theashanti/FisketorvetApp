@@ -26,6 +26,48 @@
     "Price": 100,
     "Size": "Medium",
     "StoreName": "Dalle Valle"
+  },
+  {
+    "Id": 5,
+    "Name": "Cheeseburger",
+    "Price": 15,
+    "Size": "Medium",
+    "StoreName": "McDonalds"
+  },
+  {
+    "Id": 6,
+    "Name": "Fries",
+    "Price": 25,
+    "Size": "Medium",
+    "StoreName": "McDonalds"
+  },
+  {
+    "Id": 7,
+    "Name": "Frapuccino",
+    "Price": 100,
+    "Size": "Venti",
+    "StoreName": "Starbucks Coffee"
+  },
+  {
+    "Id": 8,
+    "Name": "Donut",
+    "Price": 40,
+    "Size": "Medium",
+    "StoreName": "Starbucks Coffee"
+  },
+  {
+    "Id": 9,
+    "Name": "Kebab menu",
+    "Price": 125,
+    "Size": "Large",
+    "StoreName": "And Kebab"
+  },
+  {
+    "Id": 10,
+    "Name": "Fries",
+    "Price": 25,
+    "Size": "Medium",
+    "StoreName": "And Kebab"
   }
 ] 
 

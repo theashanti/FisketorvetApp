@@ -33,13 +33,13 @@
                     <div class="card-body">
                         <div class="mx-auto">
                             <div class="product-details">
-                                <span class="font-weight-bold d-block">@item.Name</span> <span>@item.Price kr</span> 
+                                <span class="font-weight-bold d-block" style="color: #efb0c6; text-decoration: none;" >@item.Name</span> <span>@item.Price kr</span> 
                                 <div class="weight">@item.Type in  @item.Color</div>
                                 <div class="weight"> @item.Gender @item.Size </div>
 
                                 @if (HttpContext.Session.GetString("Name") != null)
                                 {
-                                <a class="btn btn-primary" asp-page="/Products" asp-route-id="@item.Id" asp-route-iname="@item.Name">Add to cart</a>
+                                <a class="btn btn-info" asp-page="/Products" asp-route-id="@item.Id" asp-route-iname="@item.Name">Add to cart</a>
                                 }
                             </div>
 

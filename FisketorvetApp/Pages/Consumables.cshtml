@@ -31,12 +31,12 @@
                     <div class="card-body">
                         <div class="mx-auto">
                             <div class="product-details">
-                                <span class="font-weight-bold d-block">@consumable.Name</span> <span>@consumable.Price kr</span> 
+                                <span class="font-weight-bold d-block" style="color: #efb0c6; text-decoration: none;" >@consumable.Name</span> <span>@consumable.Price kr</span> 
                                 <div class="weight">@consumable.Size </div>
 
                                 @if (HttpContext.Session.GetString("Name") != null)
                                 {
-                                <a class="btn btn-primary" asp-page="/Products" asp-route-id="@consumable.Id" asp-route-iname="@consumable.Name">Add to cart</a>
+                                <a class="btn btn-info" asp-page="/Consumables" asp-route-id="@consumable.Id" asp-route-iname="@consumable.Name">Add to cart</a>
                                 }
                             </div>
 
