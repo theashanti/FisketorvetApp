@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using FisketorvetApp.Interfaces;
 using FisketorvetApp.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
@@ -34,6 +35,7 @@ namespace FisketorvetApp.Pages
             if (id != 0)
             {
                 cart.AddItem(consumable.GetConsumable(id, iname));
+                HttpContext.Session.SetInt32("CartCount", cart.GetAllItems().Count);
             }
 
             if (name != null)
