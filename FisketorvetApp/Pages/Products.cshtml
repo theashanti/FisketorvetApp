@@ -38,67 +38,22 @@
             {
                 <div class="card mb-3 mx-auto col-12 col-md-6 col-lg-3">
                     <div class="card-body">
-                        <h5>@item.Name</h5>
-                        <h5> @item.Type</h5>
-                        <h5> @item.Price</h5>
-                        <h5>@item.Gender</h5>
-                        <h5> @item.Size</h5>
-                        <h5>@item.Color</h5>
-                        @if (HttpContext.Session.GetString("Name") != null)
-                        {
-                        <a asp-page="/Products" asp-route-id="@item.Id" asp-route-iname="@item.Name">Add to cart</a>
+                        <div class="mx-auto">
+                            <div class="product-details">
+                                <span class="font-weight-bold d-block">@item.Name</span> <span>@item.Price kr</span> 
+                                <div class="weight">@item.Type in  @item.Color</div>
+                                <div class="weight"> @item.Gender @item.Size </div>
 
-                        }
+                                @if (HttpContext.Session.GetString("Name") != null)
+                                {
+                                <a class="btn btn-primary" asp-page="/Products" asp-route-id="@item.Id" asp-route-iname="@item.Name">Add to cart</a>
+                                }
+                            </div>
+
+                        </div>
                     </div>
                 </div>
             }
         }
     </div>
 </div>
-
-<table class="table">
-    <thead>
-        <tr>
-            <th scope="col">Type</th>
-            <th scope="col">Name</th>
-            <th scope="col">Price</th>
-            <th scope="col">Gender</th>
-            <th scope="col">Size</th>
-            <th scope="col">Color</th>
-        </tr>
-    </thead>
-    <tbody>
-        @if (Model.Items != null)
-        {
-            foreach (var item in Model.Items)
-            {
-        <tr>
-            <td>
-                @item.Type
-            </td>
-            <td>
-                @item.Name
-            </td>
-            <td>
-                @item.Price
-            </td>
-            <td>
-                @item.Gender
-            </td>
-            <td>
-                @item.Size
-            </td>
-            <td>
-                @item.Color
-            </td>
-            @if (HttpContext.Session.GetString("Name") != null)
-            {
-                <td>
-                    <a asp-page="/Products" asp-route-id="@item.Id" asp-route-iname="@item.Name">Add to cart</a>
-                </td>
-            }
-        </tr>
-            }
-        }
-    </tbody>
-</table>
