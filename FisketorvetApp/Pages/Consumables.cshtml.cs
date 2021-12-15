@@ -19,6 +19,7 @@ namespace FisketorvetApp.Pages
         public string Criteria { get; set; }
         
         private static string storeQuery;
+        public string Rname { get; set; }
 
         private IConsumablesRepository consumable;
         private IShoppingCartRepository cart;
@@ -38,6 +39,7 @@ namespace FisketorvetApp.Pages
             if (name != null)
             {
                 storeQuery = name;
+                Rname = name;
             }
             
             if (String.IsNullOrEmpty(Criteria))
