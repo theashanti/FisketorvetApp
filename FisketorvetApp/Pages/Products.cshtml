@@ -7,16 +7,9 @@
 <!-- Ashanti -->
 
 <div class="container">
-    <h1 class="text-center">Name of the Store</h1>
-    <div class="row text-center">
-        <div class="col-md-6">
-            <img class="" src="/wp-content/themes/creativeforces/images/majapic.jpg" width="250">
-            <h3 class="text-center">Name store</h3>
-            <h3 class="text-center">Open from 2 to 3</h3>
-        </div>
-        <div class="col-md-6">
-            <p><strong>Name of the Store</strong> Description.</p>
-        </div>
+    <h1 class="text-center">@Model.SName</h1>
+    <div class="text-center">
+            <p><strong>@Model.SName</strong>    Open from 10 to 15</p>
     </div>
 </div>
 
@@ -30,7 +23,7 @@
     </form>
 </div>
 
-<div class="container">
+<div class="container-fluid mt-50">
     <div class="row">
         @if (Model.Items != null)
         {

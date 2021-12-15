@@ -19,6 +19,8 @@ namespace FisketorvetApp.Pages
         public string Criteria { get; set; }
        
         private static string storeQuery;
+
+        public string SName { get; set; }
        
         [BindProperty]
         public List<Clothes> Items { get; set; } = new List<Clothes>();
@@ -42,7 +44,9 @@ namespace FisketorvetApp.Pages
             if (name != null)
             {
                 storeQuery = name;
+                SName = name;
             }
+
 
 
             if (String.IsNullOrEmpty(Criteria))

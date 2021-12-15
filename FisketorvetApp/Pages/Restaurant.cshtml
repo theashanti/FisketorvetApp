@@ -4,7 +4,7 @@
 }
 <!--Máté-->
 
-<h1>Restaurants</h1>
+<h1 align="center">Restaurants</h1>
 
 <div>
     <form>
@@ -14,36 +14,18 @@
         </p>
     </form>
 </div>
-<table class="table table-bordered table-hover table-striped">
-    <thead>
-        <tr>
-            <th> Name </th>
-            <th> Location </th>
-            <th> Opening Hours </th>
-        </tr>
-    </thead>
-    <tbody>
-        @*@foreach (var store in Model.Stores)
-            {
 
-               <tr>
-                   <td><a asp-area="" asp-page="/Restaurant">@store.Name</a></td>
-                   <td><a asp-area="" asp-page="/Restaurant">@store.Location</a></td>
-                   <td><a asp-area="" asp-page="/Restaurant">@store.OpeningHours</a></td>
-               </tr>
-            }*@
-        
+<div class="container">
+    <div class="row">
         @foreach (var restaurant in Model.Restaurants)
         {
-
-            <tr>
-                <td><a asp-page="/Consumables" asp-route-name="@restaurant.Name">@restaurant.Name</a></td>
-                <td>@restaurant.Location</td>
-                <td>@restaurant.OpeningHours</td>
-
-            </tr>
-
+            <div class="card mb-3 mx-auto col-12 col-md-6 col-lg-3">
+                <div class="card-body">
+                    <a asp-page="/Products" asp-route-name="@restaurant.Name">@restaurant.Name</a>
+                    <h5> @restaurant.Location</h5>
+                    <h5>@restaurant.OpeningHours</h5>
+                </div>
+            </div>
         }
-
-    </tbody>
-</table>
+    </div>
+</div>

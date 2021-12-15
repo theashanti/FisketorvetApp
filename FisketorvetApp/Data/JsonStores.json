@@ -2,25 +2,25 @@
   {
     "Name": "H&M",
     "PhoneNumber": 8742637,
-    "Location": "jskafn",
+    "Location": "First floor",
     "OpeningHours": "10-3"
   },
   {
     "Name": "Change",
     "PhoneNumber": 87486537,
-    "Location": "jskldj",
+    "Location": "First floor",
     "OpeningHours": "10-3"
   },
   {
     "Name": "Adidas",
     "PhoneNumber": 874262697,
-    "Location": "jskamna",
+    "Location": "First floor",
     "OpeningHours": "10-3"
   },
   {
     "Name": "Nike",
     "PhoneNumber": 982637,
-    "Location": "jsahhey",
+    "Location": "First floor",
     "OpeningHours": "10-3"
   }
 ] 
