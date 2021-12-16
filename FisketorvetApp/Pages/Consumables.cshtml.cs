@@ -36,6 +36,7 @@ namespace FisketorvetApp.Pages
             {
                 cart.AddItem(consumable.GetConsumable(id, iname));
                 HttpContext.Session.SetInt32("CartCount", cart.GetAllItems().Count);
+                Rname = storeQuery;
             }
 
             if (name != null)
